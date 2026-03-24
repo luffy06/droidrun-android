@@ -93,56 +93,62 @@ agent:
 llm_profiles:
   # Manager: Plans and reasons about task progress
   manager:
-    provider: GoogleGenAI
-    model: models/gemini-2.5-pro
+    provider: OpenAI
+    model: gpt-4o-mini
     temperature: 0.2
-    # kwargs: # optional kwargs, add api_key in kwargs if not already in .env
+    # kwargs: # optional kwargs, add api_key here if not already in environment
     #   max_tokens: 8192
+    # OpenAILike example for Minimax:
+    # provider: OpenAILike
+    # model: MiniMax-M1
+    # api_base: https://api.minimax.chat/v1
+    # kwargs:
+    #   api_key: ${MINIMAX_API_KEY}
       
   # Executor: Selects and executes atomic actions
   executor:
-    provider: GoogleGenAI
-    model: models/gemini-2.5-flash
+    provider: OpenAI
+    model: gpt-4o-mini
     temperature: 0.1
     # kwargs:
     #   max_tokens: 4096
       
   # Fast Agent: Direct execution agent (XML tool-calling or code generation)
   fast_agent:
-    provider: GoogleGenAI
-    model: models/gemini-2.5-pro
+    provider: OpenAI
+    model: gpt-4o-mini
     temperature: 0.2
     # kwargs:
     #   max_tokens: 8192
       
   # Text Manipulator: Edits text in input fields
   text_manipulator:
-    provider: GoogleGenAI
-    model: models/gemini-2.5-flash
+    provider: OpenAI
+    model: gpt-4o-mini
     temperature: 0.3
     # kwargs:
     #   max_tokens: 4096
       
   # App Opener: Opens apps by name/description
   app_opener:
-    provider: GoogleGenAI
-    model: models/gemini-2.5-flash
+    provider: OpenAI
+    model: gpt-4o-mini
     temperature: 0.0
     # kwargs:
     #   max_tokens: 512
 
   # Scripter: Executes Python scripts for off-device operations
   scripter:
-    provider: GoogleGenAI
-    model: models/gemini-2.5-flash
+    provider: OpenAI
+    model: gpt-4o-mini
     temperature: 0.1
     # kwargs:
     #   max_tokens: 4096
 
   # Structured Output: Extracts structured data from final answers
   structured_output:
-    provider: GoogleGenAI
-    model: models/gemini-2.5-flash
+    provider: OpenAI
+    model: gpt-4o-mini
     temperature: 0.0
     # kwargs:
     #   max_tokens: 2048

@@ -15,8 +15,8 @@ from droidrun.mcp.config import MCPConfig, MCPServerConfig
 class LLMProfile:
     """LLM profile configuration."""
 
-    provider: str = "GoogleGenAI"
-    model: str = "gemini-2.5-pro"
+    provider: str = "OpenAI"
+    model: str = "gpt-4o-mini"
     temperature: float = 0.2
     base_url: Optional[str] = None
     api_base: Optional[str] = None
@@ -205,44 +205,44 @@ class DroidrunConfig:
         """Get default agent specific LLM profiles."""
         return {
             "manager": LLMProfile(
-                provider="GoogleGenAI",
-                model="gemini-2.5-pro",
+                provider="OpenAI",
+                model="gpt-4o-mini",
                 temperature=0.2,
                 kwargs={},
             ),
             "executor": LLMProfile(
-                provider="GoogleGenAI",
-                model="gemini-2.5-pro",
+                provider="OpenAI",
+                model="gpt-4o-mini",
                 temperature=0.1,
                 kwargs={},
             ),
             "fast_agent": LLMProfile(
-                provider="GoogleGenAI",
-                model="gemini-2.5-pro",
+                provider="OpenAI",
+                model="gpt-4o-mini",
                 temperature=0.2,
                 kwargs={},
             ),
             "text_manipulator": LLMProfile(
-                provider="GoogleGenAI",
-                model="gemini-2.5-pro",
+                provider="OpenAI",
+                model="gpt-4o-mini",
                 temperature=0.3,
                 kwargs={},
             ),
             "app_opener": LLMProfile(
-                provider="GoogleGenAI",
-                model="gemini-2.5-pro",
+                provider="OpenAI",
+                model="gpt-4o-mini",
                 temperature=0.0,
                 kwargs={},
             ),
             "scripter": LLMProfile(
-                provider="GoogleGenAI",
-                model="gemini-2.5-flash",
+                provider="OpenAI",
+                model="gpt-4o-mini",
                 temperature=0.1,
                 kwargs={},
             ),
             "structured_output": LLMProfile(
-                provider="GoogleGenAI",
-                model="gemini-2.5-flash",
+                provider="OpenAI",
+                model="gpt-4o-mini",
                 temperature=0.0,
                 kwargs={},
             ),

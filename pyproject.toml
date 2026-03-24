@@ -14,7 +14,8 @@ dependencies = [
     "aiofiles>=25.1.0",
     "opentelemetry-api>=1.30.0",
     "python-dotenv>=1.2.1",
-    "llama-index-llms-google-genai>=0.8.5",
+    "llama-index-llms-openai>=0.5.6",
+    "llama-index-llms-openai-like>=0.5.1",
 ]
 requires-python = ">=3.11,<3.14"
 readme = "README.md"
@@ -55,13 +56,16 @@ cloud = [
 deepseek = [
     "llama-index-llms-deepseek>=0.2.1",
 ]
+google = [
+    "llama-index-llms-google-genai>=0.8.5",
+]
 dev = [
     "black==25.9.0",
     "ruff>=0.13.0",
     "mypy>=1.0.0",
     "bandit>=1.8.6",
     "safety>=3.2.11",
-    "droidrun[cloud,langfuse,mcp,ollama,openai,openailike,openrouter,phoenix,tui]",
+    "droidrun[cloud,google,langfuse,mcp,ollama,openai,openailike,openrouter,phoenix,tui]",
 ]
 langfuse = [
     "langfuse==3.12.1",

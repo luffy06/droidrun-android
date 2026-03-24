@@ -321,7 +321,7 @@ def cli():
 @click.option(
     "--provider",
     "-p",
-    help="LLM provider (OpenAI, Ollama, Anthropic, GoogleGenAI, DeepSeek)",
+    help="LLM provider (OpenAI, OpenAILike, GoogleGenAI, Anthropic, Ollama, DeepSeek)",
     default=None,
 )
 @click.option(

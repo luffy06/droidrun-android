@@ -52,7 +52,7 @@ uv pip install droidrun
 ```
 
 <Note>
-Most LLM providers (Google Gemini, OpenAI, Ollama, OpenRouter) are included by default. For additional providers, install extras: `uv tool install 'droidrun[anthropic,deepseek]'`.
+OpenAI and OpenAI-compatible endpoints are included by default. For Google Gemini or additional providers, install extras such as `droidrun[google]`, `droidrun[anthropic]`, or `droidrun[deepseek]`.
 </Note>
 
 ### Set Up the Portal APK
@@ -88,10 +88,7 @@ Droidrun uses a configuration-driven approach. On first run, Droidrun creates a 
 **Set your API key:**
 
 ```bash
-# For Google Gemini (default)
-export GOOGLE_API_KEY=your-api-key-here
-
-# For OpenAI
+# For OpenAI (default)
 export OPENAI_API_KEY=your-api-key-here
 
 # For Anthropic Claude
@@ -106,11 +103,16 @@ export DEEPSEEK_API_KEY=your-api-key-here
 Now you're ready to control your device with natural language:
 
 ```bash
-# Using default configuration (Google Gemini)
+# Using default configuration (OpenAI)
 droidrun run "Open the settings app and tell me the Android version"
 
 # Override provider and model
 droidrun run "Check the battery level" --provider OpenAI --model gpt-4o
+
+# Use Minimax via OpenAI-compatible API
+# Configure api_base and api_key in config.yaml under the selected llm_profiles entry,
+# then run with provider OpenAILike.
+droidrun run "Summarize the current screen" --provider OpenAILike --model MiniMax-M1 --api-base https://api.minimax.chat/v1
 
 # Enable vision mode (sends screenshots to LLM)
 droidrun run "What app is currently open?" --vision

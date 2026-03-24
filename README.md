@@ -77,6 +77,9 @@ pip install 'droidrun[ollama]'
 # OpenRouter
 pip install 'droidrun[openrouter]'
 
+# Google Gemini
+pip install 'droidrun[google]'
+
 # Phoenix tracing
 pip install 'droidrun[phoenix]'
 
