@@ -58,6 +58,38 @@ Mobilerun is a cloud solution powered by Droidrun a powerful framework for contr
 pip install droidrun
 ```
 
+For the core Android + ADB workflow, the base install is enough.
+Optional features are available as extras:
+
+```bash
+# Terminal UI
+pip install 'droidrun[tui]'
+
+# OpenAI models
+pip install 'droidrun[openai]'
+
+# OpenAI-compatible endpoints
+pip install 'droidrun[openailike]'
+
+# Ollama
+pip install 'droidrun[ollama]'
+
+# OpenRouter
+pip install 'droidrun[openrouter]'
+
+# Phoenix tracing
+pip install 'droidrun[phoenix]'
+
+# Langfuse tracing
+pip install 'droidrun[langfuse]'
+
+# MCP tool servers
+pip install 'droidrun[mcp]'
+
+# MobileRun cloud devices
+pip install 'droidrun[cloud]'
+```
+
 ## 🚀 Quickstart
 Read on how to get droidrun up and running within seconds in [our docs](https://docs.droidrun.ai/v3/quickstart)!   
 

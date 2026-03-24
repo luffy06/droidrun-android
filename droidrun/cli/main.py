@@ -685,7 +685,12 @@ async def doctor(device: str | None, debug: bool | None):
 @cli.command()
 def tui():
     """Launch the DroidRun Terminal User Interface."""
-    from droidrun.cli.tui import run_tui
+    try:
+        from droidrun.cli.tui import run_tui
+    except ImportError as exc:
+        raise click.ClickException(
+            "The TUI dependencies are not installed. Install droidrun[tui] to use this command."
+        ) from exc
 
     run_tui()
 
